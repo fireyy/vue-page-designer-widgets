@@ -32,34 +32,29 @@
     <div class="panel-row" flex>
       <icon name="bold" />
       <div class="panel-label">加粗</div>
-      <div flex>
-        <switcher v-model="activeElement.fontWeight"></switcher>
+      <div class="panel-value">
+        <label class="form-switch">
+          <input type="checkbox" v-model="activeElement.fontWeight">
+          <i class="form-icon"></i>
+        </label>
       </div>
     </div>
 
     <div class="panel-row" flex>
       <icon name="align-justify" />
       <div class="panel-label">对齐</div>
-      <div>
-        <input type="radio" name="align" value="left" id="txleft"
-          v-model="activeElement.textAlign">
-        <label for="txleft" title="左对齐"
-          @mousedown="activeElement.textAlign = 'left'">
-          <icon name="align-left" />
+      <div class="panel-value">
+        <label class="form-radio tooltip" data-tooltip="左对齐">
+          <input type="radio" name="align" value="left" v-model="activeElement.textAlign">
+          <i class="form-icon"></i> <icon name="align-left" />
         </label>
-
-        <input type="radio" name="align" value="center" id="txcenter"
-          v-model="activeElement.textAlign">
-        <label for="txcenter" title="居中"
-          @mousedown="activeElement.textAlign = 'center'">
-          <icon name="align-center" />
+        <label class="form-radio tooltip" data-tooltip="居中">
+          <input type="radio" name="align" value="center" v-model="activeElement.textAlign">
+          <i class="form-icon"></i> <icon name="align-center" />
         </label>
-
-        <input type="radio" name="align" value="right" id="txright"
-          v-model="activeElement.textAlign">
-        <label for="txright" title="右对齐"
-          @mousedown="activeElement.textAlign = 'right'">
-          <icon name="align-right" />
+        <label class="form-radio tooltip" data-tooltip="右对齐">
+          <input type="radio" name="align" value="right" v-model="activeElement.textAlign">
+          <i class="form-icon"></i> <icon name="align-center" />
         </label>
       </div>
     </div>
