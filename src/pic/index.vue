@@ -21,9 +21,9 @@ export default {
   name: 'braid-pic',
   icon: 'image',
   title: '图片',
-  isUpload: true,
   setting: {
     type: 'braid-pic',
+    isUpload: true,
     hasGuide: true,
     isChild: true,
     left: 0,
@@ -36,8 +36,6 @@ export default {
     'val', 				// 图片对象
     'w', 			    // 包含块的宽
     'h',  	     	// 包含块的高
-    'id',         // 选中项 id
-    'i',          // 选中项 index
     'playState'   // 动画播放状态
   ]
 }
