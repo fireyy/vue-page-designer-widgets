@@ -3,8 +3,8 @@
     class="txt"
     v-html="val.text"
     data-type="braid-txt"
-    :data-index="i"
-    :class="[{'g-active': isCurrent}, playState ? 'anm-' + val.animationName : '']"
+    :data-uuid="val.uuid"
+    :class="[playState ? 'anm-' + val.animationName : '']"
     :style="{
       position: val.belong === 'page' ? 'absolute' : 'relative',
       left: val.belong === 'page' ? val.left / w * 100 + '%' : '0',
@@ -22,46 +22,46 @@
 </template>
 
 <script>
-  export default {
-    name: 'braid-txt',
-    icon: 'type',
-    title: '文本',
-    setting: {
-      type: 'braid-txt',
-      hasGuide: true,
-      isChild: true,
-      width: 650,
-      height: 100,
-      left: 50,
-      top: 0,
-      z: 0,
-      lineHeight: 1.6,
-      fontSize: 1.2,
-      fontWeight: false,
-      color: '#000000',
-      textAlign: 'left',
-      text: '文本',
-      href: '',
-      belong: 'page',
-      animationName: ''
-    },
-    // 属性含义参照 widgets/pic/index.vue
-    props: ['val', 'h', 'w', 'i', 'id', 'playState'],
+export default {
+  name: 'braid-txt',
+  icon: 'type',
+  title: '文本',
+  setting: {
+    type: 'braid-txt',
+    hasGuide: true,
+    isChild: true,
+    width: 650,
+    height: 100,
+    left: 50,
+    top: 0,
+    z: 0,
+    lineHeight: 1.6,
+    fontSize: 1.2,
+    fontWeight: false,
+    color: '#000000',
+    textAlign: 'left',
+    text: '文本',
+    href: '',
+    belong: 'page',
+    animationName: ''
+  },
+  // 属性含义参照 widgets/pic/index.vue
+  props: ['val', 'h', 'w', 'playState'],
 
-    data () {
-      return {
-      }
-    },
+  data () {
+    return {
+    }
+  },
 
-    methods: {
-    },
+  methods: {
+  },
 
-    computed: {
-      isCurrent () {
-        return 'braid-txt' + this.i === this.id
-      }
+  computed: {
+    isCurrent () {
+      return 'braid-txt' + this.i === this.id
     }
   }
+}
 </script>
 
 <style scoped>

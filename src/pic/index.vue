@@ -1,6 +1,6 @@
 <template>
   <div class="lz-image"
-    :class="[{'g-active': 'braid-pic' + i === id}, playState ? 'anm-' + val.animationName : '']"
+    :class="[playState ? 'anm-' + val.animationName : '']"
     :style="{
       position: val.belong === 'page' ? 'absolute' : 'relative',
       width: val.width / w * 100 + '%',
@@ -9,8 +9,9 @@
       top: val.belong === 'page' ? val.top / h * 100 + '%' : '0',
       zIndex: val.z
     }">
+    <!-- TODO: move data-uuid to parent div -->
     <img data-type="braid-pic"
-      :data-index="i"
+      :data-uuid="val.uuid"
       :src="val.url">
   </div>
 </template>
