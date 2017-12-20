@@ -6,23 +6,45 @@
     "url": "fireyy/vue-page-designer-widgets",
     "type": "git"
   },
-  "main": "src/index.js",
+  "main": "dist/bundle.js",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "test": "npm run lint && echo 'no tests!'",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "build": "webpack"
   },
   "author": "fireyy <fireyy@gmail.com>",
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^8.0.3",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-jest": "^21.0.2",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-2": "^6.22.0",
+    "css-loader": "^0.28.7",
     "eslint": "^4.13.1",
     "eslint-config-fireyy": "^1.0.0",
-    "eslint-plugin-vue": "^4.0.0-beta.2"
+    "eslint-plugin-vue": "^4.0.0-beta.2",
+    "file-loader": "^1.1.6",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^13.6.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0"
   },
   "eslintConfig": {
-    "extends": ["fireyy", "plugin:vue/essential"]
+    "extends": [
+      "fireyy",
+      "plugin:vue/essential"
+    ]
   }
 }

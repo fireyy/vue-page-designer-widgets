@@ -36,7 +36,7 @@
       top: 0,
       z: 0,
       lineHeight: 1.6,
-      fontSize: .85,
+      fontSize: 1.2,
       fontWeight: false,
       color: '#000000',
       textAlign: 'left',
