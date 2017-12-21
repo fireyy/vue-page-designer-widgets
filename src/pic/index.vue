@@ -17,10 +17,13 @@
 </template>
 
 <script>
+import braidPicStyle from './style.vue'
+
 export default {
   name: 'braid-pic',
   icon: 'image',
   title: '图片',
+  panel: braidPicStyle,
   setting: {
     type: 'braid-pic',
     isUpload: true,

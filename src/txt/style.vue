@@ -62,19 +62,8 @@
 </template>
 
 <script>
-	export default {
-    name: 'braid-txt-style',
-		props: ['activeElement'],
-
-    mounted () {
-    },
-
-    methods: {
-    },
-
-    data () {
-      return {
-      }
-    }
-	}
+export default {
+  name: 'braid-txt-style',
+  props: ['activeElement']
+}
 </script>

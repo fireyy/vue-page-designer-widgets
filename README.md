@@ -10,4 +10,4 @@ yarn add vue-page-designer-widgets
 
 ## Usage
 
-TODO: usage
+View [Detail](https://github.com/fireyy/vue-page-designer)

@@ -22,10 +22,13 @@
 </template>
 
 <script>
+import braidTxtStyle from './style.vue'
+
 export default {
   name: 'braid-txt',
   icon: 'type',
   title: '文本',
+  panel: braidTxtStyle,
   setting: {
     type: 'braid-txt',
     hasGuide: true,
