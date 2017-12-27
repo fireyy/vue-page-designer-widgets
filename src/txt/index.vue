@@ -5,6 +5,8 @@
     data-type="braid-txt"
     :data-uuid="val.uuid"
     :class="[playState ? 'anm-' + val.animationName : '']"
+    contenteditable="true"
+    @blur="(e) => updateText(e, val.uuid)"
     :style="{
       position: val.belong === 'page' ? 'absolute' : 'relative',
       left: val.belong === 'page' ? val.left / w * 100 + '%' : '0',
@@ -51,17 +53,14 @@ export default {
   // 属性含义参照 widgets/pic/index.vue
   props: ['val', 'h', 'w', 'playState'],
 
-  data () {
-    return {
-    }
-  },
-
   methods: {
-  },
-
-  computed: {
-    isCurrent () {
-      return 'braid-txt' + this.i === this.id
+    updateText (e, uuid) {
+      let text = e.target.innerHTML
+      this.$store.commit('updateData', {
+        uuid: uuid,
+        key: 'text',
+        value: text
+      })
     }
   }
 }
