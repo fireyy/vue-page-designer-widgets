@@ -12,7 +12,7 @@
       left: val.belong === 'page' ? val.left / w * 100 + '%' : '0',
       top: val.belong === 'page' ? val.top / h * 100 + '%' : '0',
       width: val.width / w * 100 + '%',
-      height: val.height / h * 100 + '%',
+      minHeight: val.height / h * 100 + '%',
       zIndex: val.z,
       lineHeight: val.lineHeight,
       fontSize: val.fontSize + 'rem',
