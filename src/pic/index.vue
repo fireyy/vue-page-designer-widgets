@@ -49,5 +49,8 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
   }
 </style>
