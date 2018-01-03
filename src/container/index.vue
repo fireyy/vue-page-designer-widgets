@@ -37,6 +37,7 @@ export default {
   panel: stylec,
   setting: {
     type: WIDGET_NAME,
+    isContainer: true,
     hasGuide: true,
     name: '',
     width: 650,
