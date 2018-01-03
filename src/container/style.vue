@@ -1,5 +1,5 @@
 <template>
-	<div v-if="activeElement.type === 'braid-container'">
+	<div>
     <hr>
     <div class="panel-row">
       <icon name="credit-card" />

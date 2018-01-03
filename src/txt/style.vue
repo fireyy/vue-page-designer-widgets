@@ -1,7 +1,6 @@
 <template>
-	<div v-if="activeElement.type === 'braid-txt'">
+	<div>
     <hr>
-
     <div class="panel-row" flex>
       <icon name="sliders" />
       <div class="panel-label">行高</div>
