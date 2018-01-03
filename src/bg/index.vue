@@ -14,7 +14,12 @@ export default {
   panel: null,
   setting: {
     type: WIDGET_NAME,
+    isContainer: false,
+    hasGuide: false,
     isUpload: true,
+    isChild: false,
+    dragable: false,
+    resizable: false,
     href: '',
     belong: 'page'
   },

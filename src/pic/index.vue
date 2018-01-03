@@ -24,9 +24,12 @@ export default {
   panel: null,
   setting: {
     type: WIDGET_NAME,
+    isContainer: false,
     isUpload: true,
     hasGuide: true,
     isChild: true,
+    dragable: true,
+    resizable: true,
     left: 0,
     z: 0,
     href: '',                         // 超链接

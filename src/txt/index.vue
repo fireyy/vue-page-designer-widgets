@@ -32,8 +32,12 @@ export default {
   panel: braidTxtStyle,
   setting: {
     type: WIDGET_NAME,
+    isContainer: false,
+    isUpload: false,
     hasGuide: true,
     isChild: true,
+    dragable: true,
+    resizable: true,
     width: 650,
     height: 100,
     left: 50,
