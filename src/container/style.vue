@@ -114,8 +114,8 @@ export default {
   props: ['activeElement'],
   methods: {
     addPic () {
-      this.$store.$emit('upload', (payload) => {
-        this.$store.commit('addContainerBackPic', payload)
+      this.$vpd.$emit('upload', (payload) => {
+        this.$vpd.commit('addContainerBackPic', payload)
       })
     }
   }
