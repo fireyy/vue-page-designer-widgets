@@ -2,7 +2,7 @@
 	<div>
     <hr>
     <div class="panel-row">
-      <icon name="credit-card" />
+      <vpd-icon name="credit-card" />
       <div class="panel-label">容器名称</div>
       <div class="panel-value">
         <input type="text" v-model.trim="activeElement.name" placeholder="容器名称必填">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="panel-row">
-      <icon name="grid" />
+      <vpd-icon name="grid" />
       <div class="panel-label">display</div>
       <div class="panel-value">
         <select v-model="activeElement.display">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="panel-row" v-show="activeElement.display === 'flex'">
-      <icon name="shuffle" />
+      <vpd-icon name="shuffle" />
       <div class="panel-label">主轴方向</div>
       <div class="panel-value">
         <select v-model="activeElement.dir">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="panel-row" v-show="activeElement.display === 'flex'">
-      <icon name="align-justify" />
+      <vpd-icon name="align-justify" />
       <div class="panel-label">主轴分布</div>
       <div class="panel-value">
         <select v-model="activeElement.justify">
@@ -48,7 +48,7 @@
     </div>
 
     <div class="panel-row" v-show="activeElement.display === 'flex'">
-      <icon name="align-center" />
+      <vpd-icon name="align-center" />
       <div class="panel-label">侧轴分布</div>
       <div class="panel-value">
         <select v-model="activeElement.align">
@@ -61,7 +61,7 @@
 
     <hr>
     <div class="panel-row">
-      <icon name="target" />
+      <vpd-icon name="target" />
       <div class="panel-label">背景色</div>
       <div class="panel-value">{{ activeElement.bgColor }}</div>
       <div class="panel-value">
@@ -70,19 +70,19 @@
     </div>
 
     <div class="panel-row">
-      <icon name="image" />
+      <vpd-icon name="image" />
       <div class="panel-label">背景图</div>
       <div class="panel-value">
         <div class="panel-preview"
           @click="addPic"
           :style="{ backgroundImage: 'url(' + activeElement.backPic + ')' }">
-          <icon name="plus" v-show="!activeElement.backPic" />
+          <vpd-icon name="plus" v-show="!activeElement.backPic" />
         </div>
       </div>
     </div>
 
     <div class="panel-row">
-      <icon name="square" />
+      <vpd-icon name="square" />
       <div class="panel-label">圆角</div>
       <div class="panel-value">
         <input type="text" v-model="activeElement.radius">
@@ -90,7 +90,7 @@
     </div>
 
     <div class="panel-row">
-      <icon name="maximize" />
+      <vpd-icon name="maximize" />
       <div class="panel-label">边的宽度</div>
       <div class="panel-value">
         <input type="text" v-model="activeElement.borderWidth">
@@ -98,7 +98,7 @@
     </div>
 
     <div class="panel-row">
-      <icon name="edit-3" />
+      <vpd-icon name="edit-3" />
       <div class="panel-label">边的颜色</div>
       <div class="panel-value">{{ activeElement.borderColor }}</div>
       <div>
